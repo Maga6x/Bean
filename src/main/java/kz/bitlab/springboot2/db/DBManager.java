@@ -17,6 +17,7 @@ public class DBManager {
 
     @PostConstruct
     public void init() {
+
         tasks.add(new Task(1L, "Task 1", null, "2024-12-5", false));
         tasks.add(new Task(2L, "Task 2", null, "2024-12-5", true));
         tasks.add(new Task(3L, "Task 3", null, "2024-12-6", true));
@@ -25,6 +26,7 @@ public class DBManager {
     }
 
     public void addTask(String name, String description, String deadlineDate) {
+
         Task task = new Task();
         task.setId((long) tasks.size() + 1);
         task.setName(name);
